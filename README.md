@@ -4,7 +4,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-disaster--response--app--f17ab.web.app-red?style=for-the-badge&logo=firebase)](https://disaster-response-app-f17ab.web.app)
 [![Built with Firebase](https://img.shields.io/badge/Built%20with-Firebase-orange?style=for-the-badge&logo=firebase)](https://firebase.google.com)
-[![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini%20AI-blue?style=for-the-badge&logo=google)](https://ai.google.dev)
+
 
 ---
 
