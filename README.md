@@ -1,6 +1,6 @@
 # 🚨 DisasterResponse — Smart Resource Allocation Platform
 
-> **Google Solutions Challenge 2026** · AI-powered disaster relief coordination for India
+> · AI-powered disaster relief coordination for India
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-disaster--response--app--f17ab.web.app-red?style=for-the-badge&logo=firebase)](https://disaster-response-app-f17ab.web.app)
 [![Built with Firebase](https://img.shields.io/badge/Built%20with-Firebase-orange?style=for-the-badge&logo=firebase)](https://firebase.google.com)
@@ -238,4 +238,4 @@ disaster-response-web/
 
 ---
 
-*Built for Google Solutions Challenge 2026 · Team from Cummins College of Engineering, Pune*
+
