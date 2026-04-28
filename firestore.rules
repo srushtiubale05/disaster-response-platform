@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can read their own profile; coordinators can read all
+    match /users/{uid} {
+      allow read: if request.auth != null;
+      allow write: if request.auth.uid == uid;
+    }
+
+    // Needs: anyone authenticated can read; only coordinators can write
+    match /needs/{needId} {
+      allow read: if request.auth != null;
+      allow create, update: if request.auth != null &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'coordinator';
+    }
+
+    // Tasks: authenticated users can read; coordinators create; volunteers update status
+    match /tasks/{taskId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'coordinator';
+      allow update: if request.auth != null;
+    }
+
+    // Volunteers: can read own profile; coordinators can read all
+    match /volunteers/{uid} {
+      allow read: if request.auth != null;
+      allow write: if request.auth.uid == uid;
+    }
+  }
+}
